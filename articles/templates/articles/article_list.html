@@ -9,7 +9,7 @@
     <h1>News archive</h1>
     {% for article in article_list %}
     <h2>
-        <a href="#">
+        <a href="{{ article.get_absolute_url }}">
             {{ article.title }}
         </a>
     </h2>
