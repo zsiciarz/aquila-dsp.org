@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+{% load url from future %}
+{% load i18n %}
+
+{% block title %}Features | {% endblock title %}
+
+{% block content %}
+  <section class="content">
+    <h1>Feature overview</h1>
+    <p>This page provides an overview of Aquila library features. The following list is a short presentation of what is (or will be) possible with the Aquila DSP library. As the third version is under development, not everything listed here is available at the moment (at least, not in Aquila 3). However, there are some features which had been already implemented in Aquila 2 and just haven't been ported yet, so stay tuned.</p>
+    <p>This section will be updated as soon as new features are incorporated into the library.</p>
+
+    <figure class="features">
+      <section id="feature-input">
+        <h2>Input</h2>
+        <p>Accessing signals from different sources.</p>
+        <ul>
+          <li class="aquila3">C++ array or vector</li>
+          <li class="comingsoon">text file</li>
+          <li class="aquila3">.wav file</li>
+        </ul>
+      </section>
+      <section id="feature-generators">
+        <h2>Generators</h2>
+        <p>Generating basic signals <em>on-the-fly</em>.</p>
+        <ul>
+          <li class="aquila3">sine</li>
+          <li class="aquila3">rectangular</li>
+          <li class="aquila3">triangular/sawtooth</li>
+          <li class="aquila3">white noise</li>
+          <li class="aquila3">pink noise</li>
+        </ul>
+      </section>
+      <section id="feature-windowing">
+        <h2>Windowing</h2>
+        <p>Applying different window functions for smoother transformations of finite-length signals.</p>
+        <ul>
+          <li class="aquila3">rectangular</li>
+          <li class="aquila3">Hamming</li>
+          <li class="aquila3">Hann</li>
+          <li class="aquila3">Barlett</li>
+          <li class="aquila3">Blackman</li>
+          <li class="aquila3">flat-top</li>
+        </ul>
+      </section>
+      <section id="feature-fft">
+        <h2>FFT</h2>
+        <p>Frequency analysis using Fast Fourier Transform.</p>
+        <ul>
+          <li class="aquila3">forward</li>
+          <li class="aquila3">inverse</li>
+          <li class="comingsoon">spectrogram</li>
+        </ul>
+      </section>
+      <section id="feature-filtering">
+        <h2>Filtering</h2>
+        <p>Digital filter design and usage.</p>
+        <ul>
+          <li class="aquila2">frequency-domain filters</li>
+          <li class="comingsoon">FIR</li>
+          <li class="comingsoon">IIR</li>
+        </ul>
+      </section>
+      <section id="feature-extraction">
+        <h2>Feature extraction</h2>
+        <p>Reducing signals into easily comparable forms.</p>
+        <ul>
+          <li class="aquila2">energy</li>
+          <li class="aquila2">power</li>
+          <li class="aquila2">MFCC</li>
+          <li class="aquila2">HFCC</li>
+        </ul>
+      </section>
+      <section id="feature-other">
+        <h2>Other algorithms and tools</h2>
+        <p>Miscellaneous library features.</p>
+        <ul>
+          <li class="aquila2">Dynamic Time Warping (DTW)</li>
+          <li class="comingsoon">classifying</li>
+        </ul>
+      </section>
+
+      <figcaption class="aside">
+        <h1>Legend</h1>
+        <ul>
+          <li class="aquila3">already implemented in Aquila 3</li>
+          <li class="aquila2">implemented in Aquila 2, will be ported to 3</li>
+          <li class="comingsoon">not done yet, coming soon</li>
+        </ul>
+      </figcaption>
+    </figure>
+  </section>
+{% endblock content %}

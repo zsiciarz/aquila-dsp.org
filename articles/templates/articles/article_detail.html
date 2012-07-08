@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load url from future %}
+{% load i18n %}
+{% load disqus_tags %}
+
+{% block title %}{{ article.title }} | {% endblock title %}
+
+{% block extra-style %}
+  <link rel="stylesheet" href="{{ STATIC_URL }}css/pygments.css" type="text/css" />
+  {% disqus_dev %}
+{% endblock %}
+
+{% block content %}
+  <section class="content">
+    <h1>{{ article.title }}</h1>
+
+    {{ article.content|safe }}
+
+    <a class="back-to-list" href="{% url 'articles-article_list' %}">&laquo; Return to list</a>
+
+    <section class="comments">
+      <h2>Comments</h2>
+      {% disqus_show_comments %}
+    </section>
+  </section>
+{% endblock %}

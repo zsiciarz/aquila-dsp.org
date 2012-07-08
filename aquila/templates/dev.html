@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load url from future %}
+{% load i18n %}
+
+{% block title %}Development | {% endblock title %}
+
+{% block content %}
+<section class="content">
+  <h1>Development</h1>
+  <h2>Current goals</h2>
+  <p>Things to do:</p>
+  <ul class="enum">
+    <li>bring all of Aquila 2.5 features to version 3</li>
+    <li>increase overall <strong>test coverage</strong> for existing features</li>
+    <li>provide <strong>binaries</strong> for common platforms (Windows installers, .deb packages etc.)</li>
+  </ul>
+
+  <h2>Compatibility</h2>
+  <p>The library is built and tested on the following platforms:</p>
+  <ul class="enum">
+    <li>Microsoft Windows 7 x64 (gcc 4.4.0, Microsoft Visual Studio 2008)</li>
+    <li>Ubuntu 10.04 x64 (gcc 4.4.3)</li>
+    <li>OpenSolaris 2009.06 x86 (gcc 3.4.3)</li>
+  </ul>
+
+  <h2>Contributing</h2>
+  <p>Aquila source code is hosted at <a href="http://github.com/zsiciarz/aquila">GitHub</a>. GitHub makes contributing ridiculously simple - just fork the project, work on it in your repository and when you're done, send me a pull request.</p>
+
+  <h2>Issue tracking</h2>
+  <p>Again, Aquila relies on GitHub for issue tracking. If you're a registered GitHub user and you'd like to share your ideas or report bugs, feel free to <a href="http://github.com/zsiciarz/aquila/issues">file an issue</a>.</p>
+
+  <aside>
+  <div>
+    <h1>Latest Git commit</h1>
+    <p>TODO</p>
+  </div>
+  </aside>
+</section>
+{% endblock content %}

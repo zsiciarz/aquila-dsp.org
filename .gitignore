@@ -1,0 +1,6 @@
+*~
+*.py[co]
+*.db
+.settings
+local_settings.py
+

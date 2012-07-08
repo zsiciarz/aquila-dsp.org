@@ -1,0 +1,15 @@
+Django==1.4
+Markdown==2.1.1
+Pygments==1.5
+South==0.7.5
+Werkzeug==0.8.3
+django-debug-toolbar==0.9.4
+django-disqus==0.4.1
+django-extensions==0.8
+django-grappelli==2.3.8
+django-markupfield==1.0.2
+django-model-utils==1.1.0
+django-rosetta==0.6.8
+django-rosetta-grappelli==1.0.1
+docutils==0.9.1
+psycopg2==2.4.5

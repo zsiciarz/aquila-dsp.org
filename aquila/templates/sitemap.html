@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load url from future %}
+{% load i18n %}
+
+{% block title %}Sitemap | {% endblock title %}
+
+{% block content %}
+  <section class="content">
+    <h1>Website sitemap</h1>
+    <ul id="sitemap">
+      <li><a href="/">Home</a></li>
+      <li><a href="{% url 'articles-article_list' %}">News archive</a></li>
+        <ul>
+        {% for article in articles %}
+          <li><a href="#">{{ article.title }}</a></li>
+        {% endfor %}
+        </ul>
+      <li><a href="{% url 'about' %}">About</a></li>
+      <li><a href="{% url 'features' %}">Features</a></li>
+      <li><a href="{% url 'docs' %}">Documentation</a></li>
+      </li>
+      <li><a href="{% url 'download' %}">Download</a></li>
+      <li><a href="{% url 'dev' %}">Development</a></li>
+      <li><a href="{% url 'license' %}">License</a></li>
+    </ul>
+  </section>
+{% endblock content %}

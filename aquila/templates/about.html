@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% load url from future %}
+{% load i18n %}
+
+{% block title %}About | {% endblock title %}
+
+{% block content %}
+<section class="content">
+  <h1>About Aquila</h1>
+  <h2>Digital Signal Processing</h2>
+  <blockquote cite="http://en.wikipedia.org/wiki/Digital_signal_processing">
+    <p>Digital signal processing (DSP) is concerned with the representation of signals by a sequence of numbers or symbols and the processing of these signals. Digital signal processing and analog signal processing are subfields of signal processing. DSP includes subfields like: audio and speech signal processing, sonar and radar signal processing, sensor array processing, spectral estimation, statistical signal processing, digital image processing, signal processing for communications, control of systems, biomedical signal processing, seismic data processing, etc.</p>
+  </blockquote>
+  <p>(Source: Wikipedia article on <cite>Digital Signal Processing</cite>)</p>
+  <h2>How does Aquila fit into that?</h2>
+  <p>Aquila operates on <strong>signals</strong>, which in fact are only arrays of numeric values. You can read signals from files (for example .wav audio format), use the entire data or only some parts of it (we call these parts <em>frames</em>). You can calculate spectra (using Fast Fourier Transform), or apply other mathematical transformations.</p>
+  <p>Sometimes the signals have to be somehow reduced in size in order to be more easily comparable. This is not compression - the signals cannot be recovered from their reduced form - but something called <em>feature extraction</em>. Aquila makes it easy to calculate different features, for example <abbr title="Mel-frequency cepstral coefficients">MFCC</abbr>, commonly used in speech recognition.</p>
+  <p>But how to compare one signal with another? How to determine that two signals are similar? With Aquila, the answer is: find the distance between them. The library implements a simple but powerful algorithm known as <em>Dynamic Time Warping</em>, which does some non-linear pattern matching to calculate distance between two sets of data.</p>
+  <h2>History</h2>
+  <p>It all started in 2007 as an academic project. The goal of the project was to develop software capable of recognizing birds' songs. The code was a big mess then, most of it was written in Borland 6 IDE and built only with Borland C++ compiler. It had a very crude user interface, but it worked :) The recognition accuracy reached 85-90% with several bird species.</p>
+  <p>Aquila 2 was an effort to separate the code responsible for signal processing from anything GUI-related, reduce code bloat and say goodbye to Borland. I have to admit that this was my &quot;sandbox&quot; for learning version control, design patterns and a few other things. For the most part, it was succesful. The code reached mostly stable state and was now (almost) independent of any GUI framework. Almost, because I was (hey, I still am) interested in Qt and decided to use <em>qmake</em> as build system. Well, that wasn't a well-thought choice. Aquila 2 formed a base of another bird-related software called <strong>SimpleBird</strong> (coming soon).</p>
+  <p>So what has changed in the third implementation of the library? Well, almost everything. The library is much more generic in the way it handles data. We moved from Subversion to <strong>Git</strong> (in case you don't know - <a href="http://github.com/">GitHub</a> rocks!) and from qmake to <strong>CMake</strong>, because building with CMake is sooo easy.</p>
+  <p>Currently there is still a lot of work to do. Many features present in Aquila 2 aren't ported yet and there are many new ideas to try and implement. The future lies ahead ;)</p>
+
+  <aside>
+    <div>
+      <h1>About this site</h1>
+      <p>The Aquila project website is powered by <a href="http://www.djangoproject.com/">Django</a> - a <strong>Python</strong> web framework. Hosting is provided by <a href="http://www.megiteam.pl/">megiteam.pl</a>, a Polish Python/Ruby/PHP hosting company.</p>
+      <p>The site uses HTML5 and some of CSS3 features. It should work correctly in all modern browsers. (No, IE6 is <strong>not</strong> a modern browser.)</p>
+    </div>
+    <div>
+      <h1>Library logo</h1>
+      <p>You can download the official Aquila 3 logo in one of the following formats:</p>
+      <ul>
+        <li><a href="{{ STATIC_URL }}img/aquila300.png">PNG (small)</a></li>
+        <li><a href="{{ STATIC_URL }}img/aquila1000.png">PNG (large)</a></li>
+        <li><a href="{{ STATIC_URL }}img/aquila.svg">SVG</a></li>
+      </ul>
+      <p>The images are licensed under a <a href="http://creativecommons.org/licenses/by-nd/3.0/">Creative Commons Attribution-No Derivative Works 3.0 Unported</a> license.</p>
+    </div>
+    <div>
+      <h1>Aquila on Facebook</h1>
+      <div id="fb-root"></div>
+      <script>
+        window.fbAsyncInit = function() {
+          FB.init({appId: 'your app id', status: true, cookie: true,
+                   xfbml: true});
+        };
+        (function() {
+          var e = document.createElement('script'); e.async = true;
+          e.src = document.location.protocol +
+            '//connect.facebook.net/en_US/all.js';
+          document.getElementById('fb-root').appendChild(e);
+        }());
+      </script>
+      <fb:like-box profile_id="120691261290307"></fb:like-box>
+    </div>
+  </aside>
+
+</section>
+{% endblock content %}

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load url from future %}
+{% load i18n %}
+
+{% block title %}{% trans "Articles archive" %} | {% endblock title %}
+
+{% block content %}
+  <section class="content">
+    <h1>News archive</h1>
+    {% for article in article_list %}
+    <h2>
+        <a href="#">
+            {{ article.title }}
+        </a>
+    </h2>
+    {{ article.content|safe|truncatewords_html:30 }}
+    {{ article.created }}
+    {% endfor %}
+  </section>
+{% endblock content %}

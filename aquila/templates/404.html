@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load url from future %}
+{% load i18n %}
+
+{% block title %}Error 404 - page not found | {% endblock title %}
+
+{% block content %}
+  <section class="content">
+    <h1>{% trans "Page not found" %}</h1>
+    <h2>{% trans "Error 404" %}</h2>
+    <p>{% trans "Oops, nothing here!" %}</p>
+    <p>Go to the <a href="{% url 'main' %}">home page</a> or take a look at the <a href="#">sitemap</a>.</p>
+  </section>
+{% endblock content %}

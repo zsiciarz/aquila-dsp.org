@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load url from future %}
+{% load i18n %}
+
+{% block extra-head %}
+  <link rel="alternate" type="application/rss+xml" title="aquila-dsp.org - articles" href="#" />
+{% endblock extra-head %}
+
+{% block content %}
+  <section class="content">
+    <h1>Welcome to Aquila!</h1>
+    <p>Aquila is an <strong>open source</strong> and <strong>cross-platform</strong> DSP (Digital Signal Processing) library written in C++.</p>
+    <p>Version 3.0 of the library is under heavy development and a final, stable release is planned in <strong>2012</strong>.</p>
+    <p>Stay tuned for more information!</p>
+    <h2>Features</h2>
+    <ul class="features-main">
+      <li>Various input signal sources</li>
+      <li>Windowing and filtering</li>
+      <li><strong>FFT</strong>-related transformations</li>
+      <li>Feature extraction (including <strong>MFCC</strong> and <strong>HFCC</strong>)</li>
+      <li>Pattern matching using Dynamic Time Warping (<strong>DTW</strong>)</li>
+    </ul>
+    <p>For details, go to <a href="{% url 'features' %}">feature overview</a>!</p>
+
+    <aside>
+      <div>
+        <h1>Latest articles</h1>
+        {% for article in articles %}
+        <article>
+          <h1>
+            <a href="#">
+                {{ article.title }}
+            </a>
+          </h1>
+          {{ article.content|safe|truncatewords_html:12 }}
+        {% endfor %}
+        </article>
+        <footer>
+          <ul>
+            <li><a href="{% url 'articles-article_list' %}">Articles archive</a></li>
+            <li><a href="#">RSS</a></li>
+          </ul>
+        </footer>
+      </div>
+    </aside>
+  </section>
+{% endblock content %}
