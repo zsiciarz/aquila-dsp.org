@@ -3,7 +3,7 @@
 {% load i18n %}
 
 {% block extra-head %}
-  <link rel="alternate" type="application/rss+xml" title="aquila-dsp.org - articles" href="#" />
+  <link rel="alternate" type="application/rss+xml" title="aquila-dsp.org - articles" href="{% url 'articles-rss' %}" />
 {% endblock extra-head %}
 
 {% block content %}
