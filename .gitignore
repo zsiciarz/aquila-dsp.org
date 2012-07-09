@@ -2,5 +2,6 @@
 *.py[co]
 *.db
 .settings
+.codeintel
 local_settings.py
 
