@@ -5,6 +5,8 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from django.views.generic import TemplateView
 
+from .views import RedirectExamplesView
+
 admin.autodiscover()
 
 urlpatterns = patterns('',
@@ -47,6 +49,10 @@ urlpatterns = patterns('',
         regex=r'^sitemap/$',
         view='aquila.views.sitemap',
         name='sitemap'
+    ),
+    url(
+        regex=r'^examples/(?P<slug>[-\w]+)/$',
+        view=RedirectExamplesView.as_view()
     ),
     url(r'^articles/', include('articles.urls')),
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
