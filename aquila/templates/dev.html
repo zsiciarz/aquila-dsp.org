@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% load url from future %}
+{% load cache %}
 {% load i18n %}
+{% load github_tags %}
 
 {% block title %}Development | {% endblock title %}
 
@@ -32,7 +34,9 @@
   <aside>
   <div>
     <h1>Latest Git commit</h1>
-    <p>TODO</p>
+      {% cache 300 github-latest-commit %}
+        {% last_commit 'zsiciarz' 'aquila' %}
+      {% endcache %}
   </div>
   </aside>
 </section>

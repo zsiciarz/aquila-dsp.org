@@ -1,0 +1,13 @@
+{% if commit %}
+  <p class="github_message">{{ commit.commit.message }}</p>
+  <footer>
+    <ul>
+      <li>
+        by <strong>{{ commit.author.login }}</strong> in
+        {{ commit.sha|truncatechars:15 }}
+      </li>
+    </ul>
+  </footer>
+{% else %}
+  <p>Sorry, GitHub returned an error.</p>
+{% endif %}
