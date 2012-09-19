@@ -10,5 +10,10 @@ class ArticleListView(ListView):
     model = Article
 
 
+class ExampleListView(ListView):
+    queryset = Article.objects.filter(tags__name__in=['example'])
+    template_name = "articles/example_list.html"
+
+
 class ArticleDetailsView(DetailView):
     model = Article
