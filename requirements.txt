@@ -12,5 +12,7 @@ django-markupfield==1.0.2
 django-model-utils==1.1.0
 django-rosetta==0.6.8
 django-rosetta-grappelli==1.0.1
+# using a fork until a new PyPI release is made
+-e git+git://github.com/hcarvalhoalves/django-taggit.git#egg=taggit
 docutils==0.9.1
 psycopg2==2.4.5

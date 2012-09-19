@@ -145,6 +145,7 @@ INSTALLED_APPS = (
     'disqus',
     'rosetta-grappelli',
     'rosetta',
+    'taggit',
 
     'articles',
     'utils',
