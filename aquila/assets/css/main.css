@@ -121,6 +121,16 @@ dl {
     font: bold 110%/1.3em Arial, sans-serif;
     margin-bottom: 0.4em;
 }
+.content h3.meta {
+    font-weight: normal;
+    color: #999;
+    font-size: 95%;
+    margin: -1em 0 0.2em;
+}
+.content h3.meta .tags {
+    display: inline-block;
+    margin-left: 1em;
+}
 .content blockquote {
     font-size: 86%;
     font-style: italic;
