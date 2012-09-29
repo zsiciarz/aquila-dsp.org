@@ -1,20 +1,4 @@
-{% extends "base.html" %}
-{% load url from future %}
+{% extends "articles/article_list.html" %}
 {% load i18n %}
 
-{% block title %}{% trans "Examples" %} | {% endblock title %}
-
-{% block content %}
-  <section class="content">
-    <h1>Examples</h1>
-    {% for article in article_list %}
-    <h2>
-        <a href="{{ article.get_absolute_url }}">
-            {{ article.title }}
-        </a>
-    </h2>
-    {{ article.content|safe|truncatewords_html:30 }}
-    {{ article.created }}
-    {% endfor %}
-  </section>
-{% endblock content %}
+{% block content-title %}{% trans "Examples" %}{% endblock %}
