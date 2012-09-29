@@ -1,0 +1,10 @@
+{% load i18n %}
+
+    <h3 class="meta">
+        {{ article.created }}
+        {% if article.tags.all %}
+            <span class="tags">
+                {% trans "tags" %}: {{ article.tags.all|join:", " }}
+            </span>
+        {% endif %}
+    </h3>

@@ -121,6 +121,10 @@ dl {
     font: bold 110%/1.3em Arial, sans-serif;
     margin-bottom: 0.4em;
 }
+.content h1 + h3.meta {
+    margin: -30px 0 20px;
+    font-size: 100%;
+}
 .content h3.meta {
     font-weight: normal;
     color: #999;

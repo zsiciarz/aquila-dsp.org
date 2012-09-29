@@ -13,7 +13,7 @@
 {% block content %}
   <section class="content">
     <h1>{{ article.title }}</h1>
-
+    {% include "articles/article_meta.html" %}
     {{ article.content|safe }}
 
     <a class="back-to-list" href="{% url 'articles-article_list' %}">&laquo; Return to list</a>
