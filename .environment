@@ -1,0 +1,4 @@
+unset PYTHONPATH
+source $HOME/v/aquila-dsp.org/bin/activate
+export DJANGO_SETTINGS_MODULE=aquila.settings
+
