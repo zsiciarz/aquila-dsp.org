@@ -77,6 +77,7 @@ def open_browser():
 def deploy():
     git_push()
     git_pull()
+    update_requirements()
     migrate()
     collect_static()
     restart()
