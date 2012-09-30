@@ -13,6 +13,10 @@ middleware here, or combine a Django application with an application of another
 framework.
 
 """
+
+import newrelic.agent
+newrelic.agent.initialize('newrelic.ini')
+
 import os
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "aquila.settings")
@@ -26,3 +30,5 @@ application = get_wsgi_application()
 # Apply WSGI middleware here.
 # from helloworld.wsgi import HelloWorldApplication
 # application = HelloWorldApplication(application)
+application = newrelic.agent.wsgi_application()(application)
+
