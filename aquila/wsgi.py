@@ -14,10 +14,11 @@ framework.
 
 """
 
-import newrelic.agent
-newrelic.agent.initialize('../newrelic.ini')
-
 import os
+import newrelic.agent
+
+newrelic.agent.initialize(os.path.join(os.path.dirname(__file__), '../newrelic.ini'))
+
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "aquila.settings")
 
