@@ -84,10 +84,13 @@ make install</code></pre>
   <p>To see what the library can do, run <code>make examples</code> after installation, while still in the build directory. This will build several example programs showing some of Aquila features (some of these examples are <a href="#">here on the site</a>). These programs can then be found in the <em>examples</em> subdirectory of the build directory.</p>
   <p>If you want to run unit tests to check that the library works as it should, run two commands:</p>
   <div class="highlight">
-  <pre><code>make tests
-make test</code></pre>
+  <pre><code>make aquila_test
+ctest</code></pre>
   </div>
-  <p>The first one only builds the test programs, while the second command runs them in a test harness (using CTest  behind the scenes).</p>
+  <p>The first one only builds the test suite, while the second command runs it using CTest. You can even submit your test results to <a href="http://my.cdash.org/index.php?project=aquila">CDash dashboard!</a> Simply change the second command above to:</p>
+  <div class="highlight">
+  <pre><code>ctest -D Experimental</code></pre>
+  </div>
 
   <h2 id="aquila25">Aquila 2.5</h2>
   <p>An older version of the library is hosted at <a href="http://code.google.com/p/aquila/">Google Code</a>. Installation is more complex as the build configuration is quite fragile. The process is described at the <a href="http://code.google.com/p/aquila/wiki/Installation">project's wiki</a>.</p>
