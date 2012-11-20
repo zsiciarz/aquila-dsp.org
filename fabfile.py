@@ -14,7 +14,7 @@ def prepare_project():
     return nested(
         cd(PROJECT_PATH),
         prefix("source ../bin/activate"),
-        prefix("source .environment")
+        prefix("source ./aquila/.environment")
     )
 
 
