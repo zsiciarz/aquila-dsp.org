@@ -12,10 +12,10 @@ a:hover {
 }
 #logo {
     background: #610061 url(../img/header_gradient_dark.png) left bottom repeat-x;
-    padding: 12px 30px 16px;
+    padding: 0.857em 2em 1.142em;
 }
 #logo hgroup {
-    background: url(../img/header_code.png) right -12px no-repeat;
+    background: url(../img/header_code.png) right -0.857em no-repeat;
 }
 #logo a {
     display: block;
@@ -34,7 +34,7 @@ nav {
     width: 100%;
 }
 nav ul {
-    margin-left: 15px;
+    margin-left: 1em;
     float: left;
 }
 nav li {
@@ -42,7 +42,7 @@ nav li {
 }
 nav a {
     display: block;
-    padding: 8px 15px;
+    padding: 0.368em 0.735em;
     font: bold 136% Arial, sans-serif;
     color: #eaeaea;
     text-shadow: #555 3px 2px 2px;
@@ -53,23 +53,23 @@ nav a:hover, nav a.selected {
 }
 body > footer {
     clear: both;
-    margin-top: 120px;
+    margin-top: 8em;
     position: relative;
-    padding: 40px 30px;
+    padding: 3em 2.5em;
     background: #610061 url(../img/footer_gradient_dark.png) left top repeat-x;
-    font-size: 76%;
-    color: #fff;
+    font-size: 85%;
+    color: rgba(255, 255, 255, 0.7);
 }
 body > footer p {
     margin: 0 0 1em;
 }
 body > footer a {
     color: #fff;
-    text-decoration: underline;
+    text-decoration: none;
 }
 body > footer a:hover {
     color: #fff;
-    text-decoration: none;
+    text-decoration: underline;
 }
 body > footer ul {
     float: right;
@@ -109,12 +109,12 @@ dl {
 .content > h1 {
     font: italic 286% Georgia, "Times New Roman", Times, serif;
     color: #610061;
-    margin: 40px 0 30px;
+    margin: 0.75em 0;
 }
 .content h2 {
     color: #610061;
     font: bold 157% Arial, sans-serif;
-    margin-bottom: 0.6em;
+    margin: 0.955em 0 0.637em;
 }
 .content h3 {
     color: #666;
@@ -153,8 +153,8 @@ p, section ul {
 }
 figure.features section {
     background: #eee;
-    margin: 20px 40px 20px 0;
-    width: 300px;
+    margin: 3% 3% 0 0;
+    width: 30%;
     float: left;
 }
 figure.features p {
@@ -286,4 +286,68 @@ aside footer li:last-child {
     list-style: none;
     font-size: 86%;
     margin-left: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        background: none;
+        padding-top: 0.6em;
+    }
+    nav a {
+        color: #7A007A;
+        padding: 0.35em 0.7em;
+        font: normal 116% Arial, sans-serif;
+        text-shadow: none;
+    }
+    nav a:hover, nav a.selected {
+        color: #fff;
+        background: #7A007A;
+    }
+    .content {
+        width: 100%;
+    }
+    .content > h1 {
+        font-size: 25px;
+        margin: 0.75em 0;
+    }
+    .content h1 + h3.meta {
+        margin: -1.5em 0 1.5em;
+        font-size: 100%;
+    }
+    aside, figcaption.aside {
+        width: 100%;
+        position: static;
+        clear: both;
+        font-size: 100%;
+        border-top: 1px #ccc solid;
+        margin-top: 30px;
+        padding-top: 30px;
+    }
+    aside div, figcaption.aside div {
+        padding: 0;
+    }
+    figure.features section {
+        width: 47%;
+    }
+    body > footer ul {
+        margin-bottom: 2em;
+    }
+    body > footer p {
+        clear: both;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    figure.features section {
+        width: 100%;
+        margin: 3% 0;
+    }
+    body > footer ul {
+        float: none;
+        margin-bottom: 4em;
+    }
+    body > footer p {
+        clear: both;
+        margin: 1em 0 0.5em 0;
+    }
 }

@@ -32,9 +32,7 @@
 
   <h3>Get the code</h3>
   <p>As the library is still under development and changes are made frequently, it is advised to get the code from version control system. Simply clone <a href="https://github.com/zsiciarz/aquila">our official Git repository</a> using the command below, which will create a directory called <code>aquila-src</code> and place there the source code of the library.</p>
-  <div class="highlight">
-  <pre><code>git clone git://github.com/zsiciarz/aquila.git aquila-src</code></pre>
-  </div>
+  <div class="highlight"><pre><code>git clone git://github.com/zsiciarz/aquila.git aquila-src</code></pre></div>
   <p>If you do not have Git installed, below are download links to most up-to-date code in master branch (also directing to Github):</p>
   <ul>
     <li><a href="https://github.com/zsiciarz/aquila/tarball/master">tarball (.tar.gz archive)</a></li>
@@ -43,19 +41,15 @@
 
   <h3>Short digression about where to build</h3>
   <p>CMake encourages <em>out-of-source</em> builds, which means that the resulting binaries will be created in a directory that is separate from the place where source code lives. This is a good practice as object files, executables and various other generated files don't clutter the source directory. Therefore we recommend building Aquila out-of-source. Let's assume a following directory structure:</p>
-  <div class="highlight">
-  <pre><code>a-top-level-directory/
+  <div class="highlight"><pre><code>a-top-level-directory/
    aquila-build/
-   aquila-src/</code></pre>
-  </div>
+   aquila-src/</code></pre></div>
   <p>Here, <code>aquila-src</code> is the directory where source code is located (either cloned from Git repository or unpacked from the archive). <code>aquila-build</code> is the place where the actual build will happen.</p>
 
   <h3>Configuration</h3>
   <p>For Aquila to build successfully, it may be neccessary to tell the compiler and linker where to find libraries and include files. Most of that path-sniffing is resolved by CMake, but not everything. There is although a possibility that things will <em>Just Work</em>, specifically on Linux-like systems where dependencies are installed to standard locations by a package manager. In such case, start with:</p>
-  <div class="highlight">
-  <pre><code>cd aquila-build/
-cmake ../aquila-src/</code></pre>
-  </div>
+  <div class="highlight"><pre><code>cd aquila-build/
+cmake ../aquila-src/</code></pre></div>
   <p>If that command succeeds, you can skip the rest of this section and go on with building and installing.</p>
   <p>Sometimes, however, CMake can't find Boost where it expects it to be (typically on Windows). Or, CMake complains about another dependency. The following options can be set at command-line to help CMake:</p>
   <dl>
@@ -65,32 +59,24 @@ cmake ../aquila-src/</code></pre>
     <dd>The directory where you want Aquila to be installed. This setting does not affect the build step, it only tells <code>make install</code> where to copy compiled libraries and header files.</dd>
   </dl>
   <p>An example CMake invocation follows (with Windows-specific settings):</p>
-  <div class="highlight">
-  <pre><code>cmake ..\aquila-src
+  <div class="highlight"><pre><code>cmake ..\aquila-src
     -DBOOST_ROOT="C:\Program Files\boost_1_41_0"
-    -DCMAKE_INSTALL_PREFIX="D:\Libs\aquila"</code></pre>
-  </div>
+    -DCMAKE_INSTALL_PREFIX="D:\Libs\aquila"</code></pre></div>
   <p>Note: I've placed the arguments to <code>cmake</code> in multiple lines for clarity, but in reality this statement should be a one-liner.</p>
 
   <h3>Build and install</h3>
   <p>Windows (MinGW) users should replace <code>make</code> with <code>mingw32-make</code> in the instructions below.</p>
-  <div class="highlight">
-  <pre><code>make
-make install</code></pre>
-  </div>
+  <div class="highlight"><pre><code>make
+make install</code></pre></div>
   <p>If all goes well, the library will build and then install to the specified path. The <code>make install</code> step may require administrator rights. That's it - the library is now built, installed and <strong>ready to use</strong>.</p>
 
   <h3>Examples and tests</h3>
   <p>To see what the library can do, run <code>make examples</code> after installation, while still in the build directory. This will build several example programs showing some of Aquila features (some of these examples are <a href="#">here on the site</a>). These programs can then be found in the <em>examples</em> subdirectory of the build directory.</p>
   <p>If you want to run unit tests to check that the library works as it should, run two commands:</p>
-  <div class="highlight">
-  <pre><code>make aquila_test
-ctest</code></pre>
-  </div>
+  <div class="highlight"><pre><code>make aquila_test
+ctest</code></pre></div>
   <p>The first one only builds the test suite, while the second command runs it using CTest. You can even submit your test results to <a href="http://my.cdash.org/index.php?project=aquila">CDash dashboard!</a> Simply change the second command above to:</p>
-  <div class="highlight">
-  <pre><code>ctest -D Experimental</code></pre>
-  </div>
+  <div class="highlight"><pre><code>ctest -D Experimental</code></pre></div>
 
   <h2 id="aquila25">Aquila 2.5</h2>
   <p>An older version of the library is hosted at <a href="http://code.google.com/p/aquila/">Google Code</a>. Installation is more complex as the build configuration is quite fragile. The process is described at the <a href="http://code.google.com/p/aquila/wiki/Installation">project's wiki</a>.</p>

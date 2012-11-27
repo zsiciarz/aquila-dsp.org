@@ -1,12 +1,14 @@
 .highlight {
     background: #272822 url(../images/stripes-code.png) left top repeat-x;
-    color: #f8f8f2; padding: 15px; margin: 15px 0;
-    border-radius: 5px;
+    color: #f8f8f2; padding: 1em; margin: 1em 0;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
     -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
     -moz-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
+    white-space: pre-wrap;
+    word-wrap: break-word;
 }
 .highlight .hll { background-color: #49483e }
 .highlight .c { color: #75715e } /* Comment */

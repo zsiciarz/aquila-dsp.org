@@ -39,10 +39,9 @@
     </header>
     <nav>
     <ul>
-      <li><a class="{% active_tab request '^/$' %}" href="{% url 'main' %}">Home</a></li>
       <li><a class="{% active_tab request '^/about/' %}" href="{% url 'about' %}">About</a></li>
       <li><a class="{% active_tab request '^/features/' %}" href="{% url 'features' %}">Features</a></li>
-      <li><a class="{% active_tab request '^/docs/' %}" href="{% url 'docs' %}">Documentation</a></li>
+      <li><a class="{% active_tab request '^/docs/' %}" href="{% url 'docs' %}">Docs</a></li>
       <li><a class="{% active_tab request '^/articles/examples/' %}" href="{% url 'articles-example_list' %}">Examples</a></li>
       <li><a class="{% active_tab request '^/download/' %}" href="{% url 'download' %}">Download</a></li>
       <li><a class="{% active_tab request '^/dev/' %}" href="{% url 'dev' %}">Development</a></li>
