@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Copyright (c) Zbigniew Siciarz 2010-2012.
+# Copyright (c) Zbigniew Siciarz 2010-2013.
 
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
