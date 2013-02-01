@@ -22,10 +22,8 @@
   </ul>
 
   <h2>Compatibility</h2>
-  <p>Most of popular compilers should be able to succesfully build the library. This includes gcc &gt; 4 (both Linux and Windows), MS Visual Studio 2008 etc. The <a href="http://my.cdash.org/index.php?project=aquila">CDash dashboard</a> can be used to assess compatibility as it collects test results from various builds. </p>
-
-  <h2>Contributing</h2>
-  <p>Aquila source code is hosted at <a href="http://github.com/zsiciarz/aquila">GitHub</a>. GitHub makes contributing ridiculously simple - just fork the project, work on it in your repository and when you're done, send me a pull request.</p>
+  <p>Aquila uses a few features from the <strong>C++11</strong> standard (integer types, smart pointers, lambda functions etc.), therefore a modern compiler is required to succesfully build the library. This includes gcc &gt;= 4.5, MS Visual Studio &gt;= 2010 or clang &gt;= 3.1.</p>
+  <p>The <a href="http://my.cdash.org/index.php?project=aquila">CDash dashboard</a> can be used to assess compatibility as it collects test results from various builds. </p>
 
   <h2>Testing</h2>
   <p>If you want to run unit tests to check that the library works as it should, run two commands:</p>
@@ -33,6 +31,9 @@
 ctest</code></pre></div>
   <p>The first one only builds the test suite, while the second command runs it using CTest. You can even submit your test results to <a href="http://my.cdash.org/index.php?project=aquila">CDash dashboard!</a> Simply change the second command above to:</p>
   <div class="highlight"><pre><code>ctest -D Experimental</code></pre></div>
+
+  <h2>Contributing</h2>
+  <p>Aquila source code is hosted at <a href="http://github.com/zsiciarz/aquila">GitHub</a>. GitHub makes contributing ridiculously simple - just fork the project, work on it in your repository and when you're done, send me a pull request.</p>
 
   <h2>Issue tracking</h2>
   <p>Again, Aquila relies on GitHub for issue tracking. If you're a registered GitHub user and you'd like to share your ideas or report bugs, feel free to <a href="http://github.com/zsiciarz/aquila/issues">file an issue</a>.</p>
