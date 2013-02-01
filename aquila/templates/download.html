@@ -21,8 +21,6 @@
   <dl>
     <dt><a href="http://www.cmake.org/">CMake</a></dt>
     <dd>Aquila relies on CMake as a build tool, so make sure you have it installed (version 2.6 or later).</dd>
-    <dt><a href="http://www.boost.org/">Boost C++ libraries</a></dt>
-    <dd>This is a required dependency. If you are a C++ developer and you don't have Boost installed, go get it now, <em>for great justice</em>.</dd>
     <dt><a href="http://qt.nokia.com/">Qt</a> (optionally)</dt>
     <dd>All GUI examples use Qt as the widget toolkit. Qt is an extensive and cross-platform UI framework.</dd>
 <!--   <dt>SFML (optionally)</dt>
@@ -47,20 +45,13 @@
   <p>Here, <code>aquila-src</code> is the directory where source code is located (either cloned from Git repository or unpacked from the archive). <code>aquila-build</code> is the place where the actual build will happen.</p>
 
   <h3>Configuration</h3>
-  <p>For Aquila to build successfully, it may be neccessary to tell the compiler and linker where to find libraries and include files. Most of that path-sniffing is resolved by CMake, but not everything. There is although a possibility that things will <em>Just Work</em>, specifically on Linux-like systems where dependencies are installed to standard locations by a package manager. In such case, start with:</p>
-  <div class="highlight"><pre><code>cd aquila-build/
-cmake ../aquila-src/</code></pre></div>
-  <p>If that command succeeds, you can skip the rest of this section and go on with building and installing.</p>
-  <p>Sometimes, however, CMake can't find Boost where it expects it to be (typically on Windows). Or, CMake complains about another dependency. The following options can be set at command-line to help CMake:</p>
+  <p>The following options can be set at command-line to configure build:</p>
   <dl>
-    <dt><code>-DBOOST_ROOT</code></dt>
-    <dd>The root directory of your Boost installation. For example, if you installed Boost to C:\Program Files\boost_1_41_0, use that path to configure the build.</dd>
     <dt><code>-DCMAKE_INSTALL_PREFIX</code></dt>
     <dd>The directory where you want Aquila to be installed. This setting does not affect the build step, it only tells <code>make install</code> where to copy compiled libraries and header files.</dd>
   </dl>
   <p>An example CMake invocation follows (with Windows-specific settings):</p>
   <div class="highlight"><pre><code>cmake ..\aquila-src
-    -DBOOST_ROOT="C:\Program Files\boost_1_41_0"
     -DCMAKE_INSTALL_PREFIX="D:\Libs\aquila"</code></pre></div>
   <p>Note: I've placed the arguments to <code>cmake</code> in multiple lines for clarity, but in reality this statement should be a one-liner.</p>
 
