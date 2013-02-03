@@ -146,6 +146,7 @@ INSTALLED_APPS = (
     'rosetta-grappelli',
     'rosetta',
     'taggit',
+    'taggit_templatetags',
     'markitup',
 
     'articles',

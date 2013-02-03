@@ -10,6 +10,16 @@ a {
 a:hover {
     color: #667c00;
 }
+a[rel=tag] {
+    display: inline-block;
+    padding: 2px 4px;
+    margin:  4px 2px;
+    border: 1px #ddd solid;
+    background: #f3f3f3;
+}
+a[rel=tag]:hover {
+    background: #fff;
+}
 #logo {
     background: #610061 url(../img/header_gradient_dark.png) left bottom repeat-x;
     padding: 0.857em 2em 1.142em;

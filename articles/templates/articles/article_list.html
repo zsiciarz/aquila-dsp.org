@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load url from future %}
 {% load i18n %}
+{% load taggit_extras %}
 
 {% block title %}{% trans "Articles archive" %} | {% endblock title %}
 
@@ -16,5 +17,14 @@
     {% include "articles/article_meta.html" %}
     {{ article.content|safe|truncatewords_html:30 }}
     {% endfor %}
+    <aside>
+    <div>
+        <h1>Tags</h1>
+        {% get_tagcloud as tags %}
+        {% for tag in tags %}
+            <a href="{% url 'articles-tagged_article_list' tag=tag.name %}" rel="tag">{{ tag.name }}</a>
+        {% endfor %}
+    </div>
+    </aside>
   </section>
 {% endblock content %}
