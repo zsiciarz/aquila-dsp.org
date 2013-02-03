@@ -16,7 +16,7 @@ django-rosetta-grappelli==1.0.1
 # using a fork until a new PyPI release is made
 -e git+git://github.com/hcarvalhoalves/django-taggit.git#egg=taggit
 docutils==0.9.1
-newrelic==1.6.0.13
+newrelic==1.10.0.28
 psycopg2==2.4.6
 pycrypto==2.6
 ssh==1.8.0
