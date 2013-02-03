@@ -146,6 +146,7 @@ INSTALLED_APPS = (
     'rosetta-grappelli',
     'rosetta',
     'taggit',
+    'markitup',
 
     'articles',
     'utils',
@@ -197,6 +198,9 @@ DEBUG_TOOLBAR_CONFIG = {
 }
 
 GRAPPELLI_INDEX_DASHBOARD = 'aquila.dashboard.CustomIndexDashboard'
+
+MARKITUP_FILTER = ('markdown.markdown', {'safe_mode': False, 'extensions': ['codehilite']})
+MARKITUP_SET = 'markitup/sets/markdown'
 
 try:
     from local_settings import *

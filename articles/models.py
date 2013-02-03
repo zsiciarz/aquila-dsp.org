@@ -4,7 +4,7 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
-from markupfield.fields import MarkupField
+from markitup.fields import MarkupField
 from model_utils.models import TimeStampedModel
 from taggit.managers import TaggableManager
 
@@ -12,7 +12,7 @@ from taggit.managers import TaggableManager
 class Article(TimeStampedModel):
     title = models.CharField(_(u"title"), max_length=255)
     slug = models.SlugField(_(u"slug"), max_length=255, unique=True)
-    content = MarkupField(_(u"content"), default_markup_type='markdown')
+    content = MarkupField(_(u"content"))
 
     tags = TaggableManager()
 
