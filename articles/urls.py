@@ -15,7 +15,7 @@ urlpatterns = patterns('',
         name='articles-article_list'
     ),
     url(
-        regex=r'^tag/(?P<tag>\w+)/$',
+        regex=r'^tag/(?P<tag>[\w\+]+)/$',
         view=TaggedArticleListView.as_view(),
         name='articles-tagged_article_list'
     ),
