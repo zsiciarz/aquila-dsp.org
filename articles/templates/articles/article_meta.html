@@ -1,10 +1,14 @@
+{% load url from future %}
 {% load i18n %}
 
     <h3 class="meta">
         {{ article.created }}
         {% if article.tags.all %}
             <span class="tags">
-                {% trans "tags" %}: {{ article.tags.all|join:", " }}
+                {% trans "tags" %}:
+                {% for tag in article.tags.all %}
+                    <a href="{% url 'articles-tagged_article_list' tag=tag.name %}" rel="tag">{{ tag }}</a>{% if not forloop.last %}, {% endif %}
+                {% endfor %}
             </span>
         {% endif %}
     </h3>
