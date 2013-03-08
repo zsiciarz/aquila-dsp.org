@@ -1,4 +1,4 @@
-Django==1.4.3
+Django==1.4.5
 Fabric==1.5.3
 Markdown==2.2.1
 PyGithub==1.8.1
