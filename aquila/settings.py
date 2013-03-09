@@ -183,6 +183,7 @@ LOGGING = {
 }
 
 INTERNAL_IPS = ('127.0.0.1',)
+ALLOWED_HOSTS = ['.siciarz.net']
 
 DEBUG_TOOLBAR_PANELS = (
     'debug_toolbar.panels.version.VersionDebugPanel',
