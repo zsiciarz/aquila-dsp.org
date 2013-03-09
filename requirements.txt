@@ -1,24 +1,24 @@
 Django==1.4.5
-Fabric==1.5.3
+Fabric==1.6.0
 Markdown==2.2.1
-PyGithub==1.8.1
+PyGithub==1.12.2
 Pygments==1.6
 South==0.7.6
 Werkzeug==0.8.3
 django-debug-toolbar==0.9.4
 django-disqus==0.4.1
-django-extensions==1.0.3
-django-grappelli==2.4.3
+django-extensions==1.1.1
+django-grappelli==2.4.4
 -e git+git://github.com/carljm/django-markitup.git#egg=markitup
 django-model-utils==1.2.0
-django-rosetta==0.6.8
+django-rosetta==0.7.1
 django-rosetta-grappelli==1.0.1
 # using a fork until a new PyPI release is made
 -e git+git://github.com/hcarvalhoalves/django-taggit.git#egg=taggit
 django-taggit-templatetags==0.4.6dev
 django-templatetag-sugar==0.1
-docutils==0.9.1
+docutils==0.10
 newrelic==1.10.0.28
+paramiko==1.10.0
 psycopg2==2.4.6
 pycrypto==2.6
-ssh==1.8.0
