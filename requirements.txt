@@ -20,5 +20,5 @@ django-templatetag-sugar==0.1
 docutils==0.10
 newrelic==1.10.0.28
 paramiko==1.10.0
-psycopg2==2.4.6
+psycopg2==2.5
 pycrypto==2.6
