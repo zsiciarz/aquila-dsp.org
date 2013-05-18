@@ -7,11 +7,13 @@ from django.views.generic import TemplateView
 
 from .views import RedirectExamplesView
 from .sitemaps import StaticSitemap
+from articles.sitemaps import ArticleSitemap
 
 admin.autodiscover()
 
 sitemaps = {
     'pages': StaticSitemap,
+    'articles': ArticleSitemap,
 }
 
 urlpatterns = patterns('',
