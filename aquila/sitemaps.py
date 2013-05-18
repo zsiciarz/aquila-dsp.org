@@ -2,6 +2,7 @@
 # Copyright (c) Zbigniew Siciarz 2010-2013.
 
 from django.contrib import sitemaps
+from django.core.urlresolvers import reverse
 
 
 class StaticSitemap(sitemaps.Sitemap):
@@ -9,7 +10,7 @@ class StaticSitemap(sitemaps.Sitemap):
     changefreq = 'daily'
 
     def items(self):
-        return ['news', 'about', 'features', 'docs', 'download', 'dev', 'license']
+        return ['main', 'about', 'features', 'docs', 'download', 'dev', 'license']
 
-    def location(self, obj):
-        return '/%s/' % obj
+    def location(self, item):
+        return reverse(item)
