@@ -6,8 +6,13 @@ from django.contrib import admin
 from django.views.generic import TemplateView
 
 from .views import RedirectExamplesView
+from .sitemaps import StaticSitemap
 
 admin.autodiscover()
+
+sitemaps = {
+    'pages': StaticSitemap,
+}
 
 urlpatterns = patterns('',
     url(
@@ -53,6 +58,13 @@ urlpatterns = patterns('',
     url(
         regex=r'^examples/(?P<slug>[-\w]+)/$',
         view=RedirectExamplesView.as_view()
+    ),
+    url(
+        regex=r'^sitemap\.xml$',
+        view='django.contrib.sitemaps.views.sitemap',
+        kwargs={
+            'sitemaps': sitemaps,
+        }
     ),
     url(r'^articles/', include('articles.urls')),
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
