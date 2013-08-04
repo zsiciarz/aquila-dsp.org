@@ -18,7 +18,7 @@ django-rosetta-grappelli==1.0.1
 django-taggit-templatetags==0.4.6dev
 django-templatetag-sugar==0.1
 docutils==0.10
-newrelic==1.12.0.56
+newrelic==1.13.1.31
 paramiko==1.11.0
 psycopg2==2.5.1
 pycrypto==2.6
