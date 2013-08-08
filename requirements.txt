@@ -17,7 +17,7 @@ django-rosetta-grappelli==1.0.1
 -e git+git://github.com/hcarvalhoalves/django-taggit.git#egg=taggit
 django-taggit-templatetags==0.4.6dev
 django-templatetag-sugar==0.1
-docutils==0.10
+docutils==0.11
 newrelic==1.13.1.31
 paramiko==1.11.0
 psycopg2==2.5.1
