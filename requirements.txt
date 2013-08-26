@@ -4,7 +4,7 @@ Markdown==2.3.1
 PyGithub==1.18.0
 Pygments==1.6
 South==0.8.2
-Werkzeug==0.9.3
+Werkzeug==0.9.4
 django-debug-toolbar==0.9.4
 django-disqus==0.4.1
 django-extensions==1.1.1
