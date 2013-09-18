@@ -22,3 +22,4 @@ newrelic==1.13.1.31
 paramiko==1.11.0
 psycopg2==2.5.1
 pycrypto==2.6
+six==1.4.1
