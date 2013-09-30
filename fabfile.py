@@ -81,4 +81,3 @@ def deploy():
     migrate()
     collect_static()
     restart()
-    open_browser()
