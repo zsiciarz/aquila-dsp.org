@@ -13,8 +13,7 @@ django-grappelli==2.4.7
 django-model-utils==1.5.0
 django-rosetta==0.7.2
 django-rosetta-grappelli==1.0.1
-# using a fork until a new PyPI release is made
--e git+git://github.com/hcarvalhoalves/django-taggit.git#egg=taggit
+-e git+git://github.com/alex/django-taggit.git#egg=taggit
 django-taggit-templatetags==0.4.6dev
 django-templatetag-sugar==0.1
 docutils==0.11
