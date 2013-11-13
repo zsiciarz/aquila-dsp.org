@@ -8,7 +8,7 @@ Werkzeug==0.9.4
 django-debug-toolbar==0.11.0
 django-disqus==0.4.1
 django-extensions==1.2.5
-django-grappelli==2.4.7
+django-grappelli==2.4.8
 -e git+git://github.com/carljm/django-markitup.git#egg=markitup
 django-model-utils==1.5.0
 django-rosetta==0.7.2
