@@ -197,9 +197,6 @@ DEBUG_TOOLBAR_PANELS = (
     'debug_toolbar.panels.signals.SignalDebugPanel',
     'debug_toolbar.panels.logger.LoggingPanel',
 )
-DEBUG_TOOLBAR_CONFIG = {
-    'INTERCEPT_REDIRECTS': False,
-}
 
 GRAPPELLI_INDEX_DASHBOARD = 'aquila.dashboard.CustomIndexDashboard'
 
