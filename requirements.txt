@@ -1,5 +1,5 @@
 Django==1.6.1
-Fabric==1.8.0
+Fabric==1.8.1
 Markdown==2.3.1
 PyGithub==1.22.0
 Pygments==1.6
