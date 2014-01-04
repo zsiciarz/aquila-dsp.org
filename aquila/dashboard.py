@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Copyright (c) Zbigniew Siciarz 2010-2013.
+# Copyright (c) Zbigniew Siciarz 2010-2014.
 
 from django.utils.translation import ugettext_lazy as _
 from django.core.urlresolvers import reverse
