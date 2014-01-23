@@ -21,5 +21,5 @@ newrelic==2.10.0.8
 paramiko==1.12.1
 psycopg2==2.5.2
 pycrypto==2.6.1
-requests==2.2.0
+requests==2.2.1
 six==1.5.2
