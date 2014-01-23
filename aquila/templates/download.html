@@ -29,7 +29,7 @@
 
   <h3>Get the code</h3>
   <p>As the library is still under development and changes are made frequently, it is advised to get the code from version control system. Simply clone <a href="https://github.com/zsiciarz/aquila">our official Git repository</a> using the command below, which will create a directory called <code>aquila-src</code> and place there the source code of the library.</p>
-  <div class="highlight"><pre><code>git clone git://github.com/zsiciarz/aquila.git aquila-src</code></pre></div>
+  <div class="codehilite"><pre><code>git clone git://github.com/zsiciarz/aquila.git aquila-src</code></pre></div>
   <p>If you do not have Git installed, below are download links to most up-to-date code in master branch (also directing to Github):</p>
   <ul>
     <li><a href="https://github.com/zsiciarz/aquila/tarball/master">tarball (.tar.gz archive)</a></li>
@@ -38,7 +38,7 @@
 
   <h3>Short digression about where to build</h3>
   <p>CMake encourages <em>out-of-source</em> builds, which means that the resulting binaries will be created in a directory that is separate from the place where source code lives. This is a good practice as object files, executables and various other generated files don't clutter the source directory. Therefore we recommend building Aquila out-of-source. Let's assume a following directory structure:</p>
-  <div class="highlight"><pre><code>a-top-level-directory/
+  <div class="codehilite"><pre><code>a-top-level-directory/
    aquila-build/
    aquila-src/</code></pre></div>
   <p>Here, <code>aquila-src</code> is the directory where source code is located (either cloned from Git repository or unpacked from the archive). <code>aquila-build</code> is the place where the actual build will happen.</p>
@@ -50,13 +50,13 @@
     <dd>The directory where you want Aquila to be installed. This setting does not affect the build step, it only tells <code>make install</code> where to copy compiled libraries and header files.</dd>
   </dl>
   <p>An example CMake invocation follows (with Windows-specific settings):</p>
-  <div class="highlight"><pre><code>cmake ..\aquila-src
+  <div class="codehilite"><pre><code>cmake ..\aquila-src
     -DCMAKE_INSTALL_PREFIX="D:\Libs\aquila"</code></pre></div>
   <p>Note: I've placed the arguments to <code>cmake</code> in multiple lines for clarity, but in reality this statement should be a one-liner.</p>
 
   <h3>Build and install</h3>
   <p>Windows (MinGW) users should replace <code>make</code> with <code>mingw32-make</code> in the instructions below.</p>
-  <div class="highlight"><pre><code>make
+  <div class="codehilite"><pre><code>make
 make install</code></pre></div>
   <p>If all goes well, the library will build and then install to the specified path. The <code>make install</code> step may require administrator rights. That's it - the library is now built, installed and <strong>ready to use</strong>.</p>
 
