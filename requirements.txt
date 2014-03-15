@@ -19,7 +19,7 @@ django-templatetag-sugar==0.1
 docutils==0.11
 ipython==1.2.1
 newrelic==2.16.0.12
-paramiko==1.12.2
+paramiko==1.13.0
 psycopg2==2.5.2
 pycrypto==2.6.1
 requests==2.2.1
