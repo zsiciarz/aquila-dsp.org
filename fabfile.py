@@ -27,11 +27,6 @@ env.color = True
 
 
 @task
-def git_push():
-    local("git push origin master")
-
-
-@task
 @roles("web")
 def git_pull():
     with cd(PROJECT_PATH):
@@ -75,7 +70,6 @@ def open_browser():
 @task
 @roles("web")
 def deploy():
-    git_push()
     git_pull()
     update_requirements()
     migrate()
