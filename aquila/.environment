@@ -1,2 +1,0 @@
-unset PYTHONPATH
-source $HOME/v/aquila-dsp.org/bin/activate
