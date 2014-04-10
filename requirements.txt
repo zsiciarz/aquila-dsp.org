@@ -13,7 +13,7 @@ django-grappelli==2.5.2
 django-model-utils==2.0.3
 django-rosetta==0.7.4
 django-rosetta-grappelli==1.0.1
--e git+git://github.com/alex/django-taggit.git#egg=taggit
+django-taggit==0.11.2
 django-taggit-templatetags==0.4.6dev
 django-templatetag-sugar==1.0
 docutils==0.11
