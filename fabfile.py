@@ -13,7 +13,7 @@ def prepare_project():
     """
     return nested(
         cd(PROJECT_PATH),
-        prefix("source ../../../.aquila-dsp/bin/activate"),
+        prefix("source ../../../.virtualenvs/aquila-dsp/bin/activate"),
     )
 
 
