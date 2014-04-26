@@ -187,6 +187,10 @@ LOGGING = {
 INTERNAL_IPS = ('127.0.0.1',)
 ALLOWED_HOSTS = ['.siciarz.net']
 
+SOUTH_MIGRATION_MODULES = {
+    'taggit': 'taggit.south_migrations',
+}
+
 GRAPPELLI_INDEX_DASHBOARD = 'aquila.dashboard.CustomIndexDashboard'
 
 MARKITUP_FILTER = ('markdown.markdown', {'safe_mode': False, 'extensions': ['codehilite']})
