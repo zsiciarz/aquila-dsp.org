@@ -150,6 +150,7 @@ INSTALLED_APPS = (
     'taggit',
     'taggit_templatetags',
     'markitup',
+    'raven.contrib.django.raven_compat',
 
     'articles',
     'utils',
@@ -195,6 +196,10 @@ GRAPPELLI_INDEX_DASHBOARD = 'aquila.dashboard.CustomIndexDashboard'
 
 MARKITUP_FILTER = ('markdown.markdown', {'safe_mode': False, 'extensions': ['codehilite']})
 MARKITUP_SET = 'markitup/sets/markdown'
+
+RAVEN_CONFIG = {
+    'dsn': '',
+}
 
 try:
     from local_settings import *
