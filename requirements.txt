@@ -3,7 +3,7 @@ Fabric==1.9.0
 Markdown==2.4.1
 PyGithub==1.25.0
 Pygments==1.6
-South==0.8.4
+South==1.0
 Werkzeug==0.9.6
 django-debug-toolbar==1.2.1
 django-disqus==0.4.1
