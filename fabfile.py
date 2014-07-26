@@ -13,14 +13,14 @@ def prepare_project():
     """
     return nested(
         cd(PROJECT_PATH),
-        prefix("source ../../../.virtualenvs/aquila-dsp/bin/activate"),
+        prefix("source ../../../.virtualenvs/aquila/bin/activate"),
     )
 
 
 PROJECT_PATH = "$HOME/v/aquila-dsp.org/aquila-dsp.org"
 
 env.roledefs = {
-    'web': ["aquila-dsp@aquila-dsp.megiteam.pl"],
+    'web': ["aquila@aquila-dsp.org"],
 }
 env.color = True
 
@@ -57,13 +57,7 @@ def collect_static():
 @task
 @roles("web")
 def restart():
-    run("appctl restart aquila-dsp")
-
-
-@task
-def open_browser():
-    import webbrowser
-    webbrowser.open("http://aquila-dsp.org")
+    run("appctl restart aquila")
 
 
 @task
