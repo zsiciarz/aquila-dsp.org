@@ -23,6 +23,7 @@ env.roledefs = {
     'web': ["aquila@aquila-dsp.org"],
 }
 env.color = True
+env.forward_agent = True
 
 
 @task
