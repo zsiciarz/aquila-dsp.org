@@ -23,5 +23,5 @@ paramiko==1.14.1
 psycopg2==2.5.3
 pycrypto==2.6.1
 raven==5.0.0
-requests==2.3.0
+requests==2.4.0
 six==1.7.3
