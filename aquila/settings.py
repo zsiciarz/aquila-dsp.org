@@ -189,10 +189,6 @@ ALLOWED_HOSTS = ['.siciarz.net']
 
 TEST_RUNNER = 'django.test.runner.DiscoverRunner'
 
-SOUTH_MIGRATION_MODULES = {
-    'taggit': 'taggit.south_migrations',
-}
-
 GRAPPELLI_INDEX_DASHBOARD = 'aquila.dashboard.CustomIndexDashboard'
 
 MARKITUP_FILTER = ('markdown.markdown', {'safe_mode': False, 'extensions': ['codehilite']})
