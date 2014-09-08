@@ -44,7 +44,6 @@ def update_requirements():
 @roles("web")
 def migrate():
     with prepare_project():
-        run("python manage.py syncdb")
         run("python manage.py migrate")
 
 
