@@ -3,7 +3,6 @@ Fabric==1.10.0
 Markdown==2.4.1
 PyGithub==1.25.0
 Pygments==1.6
-South==1.0
 Werkzeug==0.9.6
 django-debug-toolbar==1.2.1
 git+https://github.com/rajsubit/django-disqus.git@2f5067ae7de61d920e80fc6a955ab3e515eb3bc2#egg=disqus
