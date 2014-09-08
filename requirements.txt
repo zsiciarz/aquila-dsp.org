@@ -6,7 +6,7 @@ Pygments==1.6
 South==1.0
 Werkzeug==0.9.6
 django-debug-toolbar==1.2.1
-django-disqus==0.4.3
+git+https://github.com/rajsubit/django-disqus.git@2f5067ae7de61d920e80fc6a955ab3e515eb3bc2#egg=disqus
 django-extensions==1.4.0
 django-grappelli==2.5.3
 -e git+git://github.com/carljm/django-markitup.git#egg=markitup
@@ -24,4 +24,5 @@ psycopg2==2.5.4
 pycrypto==2.6.1
 raven==5.0.0
 requests==2.4.0
+simplejson==3.6.3 # until django-disqus cleans up
 six==1.7.3
