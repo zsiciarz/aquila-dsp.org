@@ -11,7 +11,7 @@ import markitup.fields
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('taggit', '0002_auto_20140908_1949'),
+        ('taggit', '0001_initial'),
     ]
 
     operations = [
