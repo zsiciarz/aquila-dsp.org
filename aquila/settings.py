@@ -187,6 +187,8 @@ LOGGING = {
 INTERNAL_IPS = ('127.0.0.1',)
 ALLOWED_HOSTS = ['.siciarz.net']
 
+TEST_RUNNER = 'django.test.runner.DiscoverRunner'
+
 SOUTH_MIGRATION_MODULES = {
     'taggit': 'taggit.south_migrations',
 }
