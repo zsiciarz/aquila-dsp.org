@@ -24,4 +24,4 @@ pycrypto==2.6.1
 raven==5.0.0
 requests==2.4.1
 simplejson==3.6.3 # until django-disqus cleans up
-six==1.7.3
+six==1.8.0
