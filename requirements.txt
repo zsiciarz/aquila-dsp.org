@@ -16,7 +16,7 @@ django-taggit==0.12.2
 django-taggit-templatetags==0.4.6dev
 django-templatetag-sugar==1.0
 docutils==0.12
-ipython==2.2.0
+ipython==2.3.0
 newrelic==2.32.0.28
 paramiko==1.15.1
 psycopg2==2.5.4
