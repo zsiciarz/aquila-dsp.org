@@ -1,5 +1,4 @@
 Django==1.7.1
-Fabric==1.10.0
 Markdown==2.5.1
 PyGithub==1.25.2
 Pygments==1.6
@@ -18,9 +17,7 @@ django-templatetag-sugar==1.0
 docutils==0.12
 ipython==2.3.0
 newrelic==2.34.0.29
-paramiko==1.15.1
 psycopg2==2.5.4
-pycrypto==2.6.1
 raven==5.1.1
 requests==2.4.3
 simplejson==3.6.4 # until django-disqus cleans up
