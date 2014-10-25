@@ -20,5 +20,5 @@ newrelic==2.34.0.29
 psycopg2==2.5.4
 raven==5.1.1
 requests==2.4.3
-simplejson==3.6.4 # until django-disqus cleans up
+simplejson==3.6.5 # until django-disqus cleans up
 six==1.8.0
