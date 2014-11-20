@@ -1,5 +1,5 @@
 Django==1.7.1
-Markdown==2.5.1
+Markdown==2.5.2
 PyGithub==1.25.2
 Pygments==2.0.1
 Werkzeug==0.9.6
