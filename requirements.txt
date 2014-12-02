@@ -5,7 +5,7 @@ Pygments==2.0.1
 Werkzeug==0.9.6
 django-debug-toolbar==1.2.2
 git+https://github.com/rajsubit/django-disqus.git@2f5067ae7de61d920e80fc6a955ab3e515eb3bc2#egg=disqus
-django-extensions==1.4.6
+django-extensions==1.4.8
 django-grappelli==2.6.3
 -e git+git://github.com/carljm/django-markitup.git#egg=markitup
 django-model-utils==2.2
