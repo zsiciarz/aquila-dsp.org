@@ -143,7 +143,6 @@ INSTALLED_APPS = (
 
     'django_extensions',
     'debug_toolbar',
-    'disqus',
     'rosetta-grappelli',
     'rosetta',
     'taggit',
