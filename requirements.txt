@@ -5,11 +5,9 @@ Pygments==2.0.2
 Werkzeug==0.10
 django-debug-toolbar==1.2.2
 django-extensions==1.5.0
-django-grappelli==2.6.3
 django-markitup==2.2.2
 django-model-utils==2.2
 django-rosetta==0.7.4
-django-rosetta-grappelli==1.0.1
 django-taggit==0.12.2
 django-taggit-templatetags==0.4.6dev
 django-templatetag-sugar==1.0

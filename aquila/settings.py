@@ -67,8 +67,6 @@ STATIC_ROOT = project_path('static')
 # Example: "http://media.lawrence.com/static/"
 STATIC_URL = '/static/'
 
-ADMIN_MEDIA_PREFIX = STATIC_URL + "grappelli/"
-
 # Additional locations of static files
 STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
@@ -136,14 +134,11 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'grappelli.dashboard',
-    'grappelli',
     'django.contrib.admin',
     'django.contrib.admindocs',
 
     'django_extensions',
     'debug_toolbar',
-    'rosetta-grappelli',
     'rosetta',
     'taggit',
     'taggit_templatetags',
@@ -187,8 +182,6 @@ INTERNAL_IPS = ('127.0.0.1',)
 ALLOWED_HOSTS = ['.siciarz.net']
 
 TEST_RUNNER = 'django.test.runner.DiscoverRunner'
-
-GRAPPELLI_INDEX_DASHBOARD = 'aquila.dashboard.CustomIndexDashboard'
 
 MARKITUP_FILTER = ('markdown.markdown', {'safe_mode': False, 'extensions': ['codehilite']})
 MARKITUP_SET = 'markitup/sets/markdown'
