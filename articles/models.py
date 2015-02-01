@@ -4,6 +4,7 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
+from djorm_pgarray.fields import TextArrayField
 from markitup.fields import MarkupField
 from model_utils.models import TimeStampedModel
 from taggit.managers import TaggableManager
@@ -15,6 +16,7 @@ class Article(TimeStampedModel):
     content = MarkupField(_(u"content"))
 
     tags = TaggableManager()
+    new_tags = TextArrayField()
 
     class Meta:
         verbose_name_plural = _(u"Articles")
