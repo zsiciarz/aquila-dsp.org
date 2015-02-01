@@ -13,11 +13,11 @@ class ArticleListView(ListView):
 class TaggedArticleListView(ArticleListView):
     def get_queryset(self):
         queryset = super(TaggedArticleListView, self).get_queryset()
-        return queryset.filter(tags__name__in=[self.kwargs['tag']])
+        return queryset.filter(tags__contains=[self.kwargs['tag']])
 
 
 class ExampleListView(ListView):
-    queryset = Article.objects.filter(tags__name__in=['example'])
+    queryset = Article.objects.filter(tags__contains=['example'])
     template_name = "articles/example_list.html"
 
 

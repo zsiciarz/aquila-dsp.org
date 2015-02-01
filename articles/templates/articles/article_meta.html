@@ -3,11 +3,11 @@
 
     <h3 class="meta">
         {{ article.created }}
-        {% if article.tags.all %}
+        {% if article.tags %}
             <span class="tags">
                 {% trans "tags" %}:
-                {% for tag in article.tags.all %}
-                    <a href="{% url 'articles-tagged_article_list' tag=tag.name %}" rel="tag">{{ tag }}</a>
+                {% for tag in article.tags %}
+                    <a href="{% url 'articles-tagged_article_list' tag=tag %}" rel="tag">{{ tag }}</a>
                 {% endfor %}
             </span>
         {% endif %}
