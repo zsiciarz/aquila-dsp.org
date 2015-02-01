@@ -140,8 +140,6 @@ INSTALLED_APPS = (
     'django_extensions',
     'debug_toolbar',
     'rosetta',
-    'taggit',
-    'taggit_templatetags',
     'markitup',
     'raven.contrib.django.raven_compat',
 
