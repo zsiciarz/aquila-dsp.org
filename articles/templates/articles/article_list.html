@@ -19,11 +19,6 @@
     {% endfor %}
     <aside>
     <div>
-        <h1>Tags</h1>
-        {% get_tagcloud as tags %}
-        {% for tag in tags %}
-            <a href="{% url 'articles-tagged_article_list' tag=tag.name %}" rel="tag">{{ tag.name }}</a>
-        {% endfor %}
     </div>
     </aside>
   </section>
