@@ -12,7 +12,7 @@
       <li><a href="{% url 'articles-article_list' %}">News archive</a></li>
         <ul>
         {% for article in articles %}
-          <li><a href="#">{{ article.title }}</a></li>
+            <li><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></li>
         {% endfor %}
         </ul>
       <li><a href="{% url 'about' %}">About</a></li>
