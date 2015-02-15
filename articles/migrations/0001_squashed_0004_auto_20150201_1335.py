@@ -9,8 +9,6 @@ import model_utils.fields
 
 class Migration(migrations.Migration):
 
-    replaces = [(b'articles', '0001_initial'), (b'articles', '0002_article_new_tags'), (b'articles', '0003_auto_20150201_1303'), (b'articles', '0004_auto_20150201_1335')]
-
     dependencies = [
     ]
 
