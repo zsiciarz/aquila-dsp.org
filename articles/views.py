@@ -1,5 +1,4 @@
-# -*- coding: utf-8 -*-
-# Copyright (c) Zbigniew Siciarz 2010-2014.
+# Copyright (c) Zbigniew Siciarz 2010-2015.
 
 from django.views.generic import ListView, DetailView
 

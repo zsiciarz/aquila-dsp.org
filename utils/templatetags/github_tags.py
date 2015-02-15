@@ -1,5 +1,4 @@
-# -*- coding: utf-8 -*-
-# Copyright (c) Zbigniew Siciarz 2010-2014.
+# Copyright (c) Zbigniew Siciarz 2010-2015.
 
 from django import template
 
@@ -11,7 +10,7 @@ register = template.Library()
 
 @register.inclusion_tag("commit.html")
 def last_commit(username, repository_name):
-    u"""
+    """
     Returns last Git commit for a given repository.
     """
     try:

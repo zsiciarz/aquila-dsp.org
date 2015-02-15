@@ -1,7 +1,6 @@
-# -*- coding: utf-8 -*-
-# Copyright (c) Zbigniew Siciarz 2010-2014.
+# Copyright (c) Zbigniew Siciarz 2010-2015.
 
-u"""
+"""
 Administration for articles.
 """
 
@@ -11,7 +10,7 @@ from .models import Article
 
 
 class ArticleAdmin(admin.ModelAdmin):
-    u"""
+    """
     Administration for articles.
     """
 

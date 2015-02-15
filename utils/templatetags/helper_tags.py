@@ -1,5 +1,4 @@
-# -*- coding: utf-8 -*-
-# Copyright (c) Zbigniew Siciarz 2010-2014.
+# Copyright (c) Zbigniew Siciarz 2010-2015.
 
 import re
 from django import template

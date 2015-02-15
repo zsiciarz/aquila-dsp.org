@@ -1,5 +1,4 @@
-# -*- coding: utf-8 -*-
-# Copyright (c) Zbigniew Siciarz 2010-2014.
+# Copyright (c) Zbigniew Siciarz 2010-2015.
 
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
@@ -10,19 +9,19 @@ from model_utils.models import TimeStampedModel
 
 
 class Article(TimeStampedModel):
-    title = models.CharField(_(u"title"), max_length=255)
-    slug = models.SlugField(_(u"slug"), max_length=255, unique=True)
-    content = MarkupField(_(u"content"))
+    title = models.CharField(_("title"), max_length=255)
+    slug = models.SlugField(_("slug"), max_length=255, unique=True)
+    content = MarkupField(_("content"))
 
     tags = TextArrayField()
 
     class Meta:
-        verbose_name_plural = _(u"Articles")
+        verbose_name_plural = _("Articles")
         ordering = ['-created']
 
-    def __unicode__(self):
-        u"""
-        The Unicode representation of an article is its title.
+    def __str__(self):
+        """
+        The string representation of an article is its title.
         """
         return self.title
 

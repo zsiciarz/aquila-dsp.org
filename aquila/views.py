@@ -1,5 +1,4 @@
-# -*- coding: utf-8 -*-
-# Copyright (c) Zbigniew Siciarz 2010-2014.
+# Copyright (c) Zbigniew Siciarz 2010-2015.
 
 from django.core.urlresolvers import reverse
 from django.shortcuts import render
