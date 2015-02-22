@@ -2,7 +2,6 @@ Django==1.7.4
 Markdown==2.6
 PyGithub==1.25.2
 Pygments==2.0.2
-Werkzeug==0.10.1
 django-debug-toolbar==1.2.2
 django-extensions==1.5.0
 django-markitup==2.2.2
