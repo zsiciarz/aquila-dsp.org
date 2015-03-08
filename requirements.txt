@@ -11,7 +11,7 @@ djorm-pgarray==1.2
 docutils==0.12
 gunicorn==19.3
 ipython==2.4.1
-newrelic==2.44.0.36
+newrelic==2.46.0.37
 psycopg2==2.6
 raven==5.2.0
 requests==2.5.3
