@@ -1,5 +1,6 @@
 # Copyright (c) Zbigniew Siciarz 2010-2015.
 
+from django.contrib.postgres.fields import ArrayField
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
@@ -13,7 +14,7 @@ class Article(TimeStampedModel):
     slug = models.SlugField(_("slug"), max_length=255, unique=True)
     content = MarkupField(_("content"))
 
-    tags = TextArrayField()
+    tags = ArrayField(models.CharField(max_length=64), blank=True, default=[])
 
     class Meta:
         verbose_name_plural = _("Articles")
