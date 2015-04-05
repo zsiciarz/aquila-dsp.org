@@ -10,8 +10,6 @@ import markitup.fields
 
 class Migration(migrations.Migration):
 
-    replaces = [('articles', '0001_squashed_0004_auto_20150201_1335'), ('articles', '0002_auto_20150405_1650')]
-
     dependencies = [
     ]
 
