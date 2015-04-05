@@ -2,9 +2,10 @@
 
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
+from django.contrib.sitemaps.views import sitemap as django_sitemap
 from django.views.generic import TemplateView
 
-from .views import RedirectExamplesView
+from . import views
 from .sitemaps import StaticSitemap
 from articles.sitemaps import ArticleSitemap
 
@@ -15,10 +16,10 @@ sitemaps = {
     'articles': ArticleSitemap,
 }
 
-urlpatterns = patterns('',
+urlpatterns = [
     url(
         regex=r'^$',
-        view='aquila.views.main',
+        view=views.main,
         name='main'
     ),
     url(
@@ -53,16 +54,16 @@ urlpatterns = patterns('',
     ),
     url(
         regex=r'^sitemap/$',
-        view='aquila.views.sitemap',
+        view=views.sitemap,
         name='sitemap'
     ),
     url(
         regex=r'^examples/(?P<slug>[-\w]+)/$',
-        view=RedirectExamplesView.as_view()
+        view=views.RedirectExamplesView.as_view()
     ),
     url(
         regex=r'^sitemap\.xml$',
-        view='django.contrib.sitemaps.views.sitemap',
+        view=django_sitemap,
         kwargs={
             'sitemaps': sitemaps,
         }
@@ -72,4 +73,4 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^rosetta/', include('rosetta.urls')),
     url(r'^markitup/', include('markitup.urls')),
-)
+]

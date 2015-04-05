@@ -7,7 +7,7 @@ from .views import ArticleListView, TaggedArticleListView, ExampleListView, \
     ArticleDetailsView
 
 
-urlpatterns = patterns('',
+urlpatterns = [
     url(
         regex=r'^$',
         view=ArticleListView.as_view(),
@@ -33,4 +33,4 @@ urlpatterns = patterns('',
         view=ArticleDetailsView.as_view(),
         name='articles-article_details'
     ),
-)
+]
