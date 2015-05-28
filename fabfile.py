@@ -24,6 +24,7 @@ env.roledefs = {
 }
 env.color = True
 env.forward_agent = True
+env.use_ssh_config = True
 
 
 @task
