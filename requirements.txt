@@ -13,6 +13,6 @@ gunicorn==19.3
 ipython==3.2.0
 newrelic==2.52.0.40
 psycopg2==2.6.1
-raven==5.4.1
+raven==5.4.2
 requests==2.7.0
 six==1.9.0
