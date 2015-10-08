@@ -15,4 +15,4 @@ newrelic==2.56.0.42
 psycopg2==2.6.1
 raven==5.7.2
 requests==2.8.0
-six==1.9.0
+six==1.10.0
