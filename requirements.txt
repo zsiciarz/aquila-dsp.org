@@ -6,7 +6,7 @@ django-debug-toolbar==1.4
 django-extensions==1.5.9
 django-markitup==2.2.2
 django-model-utils==2.4
-django-rosetta==0.7.6
+django-rosetta==0.7.8
 djorm-pgarray==1.2
 docutils==0.12
 gunicorn==19.3
