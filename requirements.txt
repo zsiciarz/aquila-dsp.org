@@ -14,5 +14,5 @@ ipython==4.0.1
 newrelic==2.58.2.45
 psycopg2==2.6.1
 raven==5.9.0
-requests==2.8.1
+requests==2.9.0
 six==1.10.0
