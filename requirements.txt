@@ -9,7 +9,7 @@ django-model-utils==2.4
 django-rosetta==0.7.8
 djorm-pgarray==1.2
 docutils==0.12
-gunicorn==19.4.1
+gunicorn==19.4.2
 ipython==4.0.1
 newrelic==2.60.0.46
 psycopg2==2.6.1
