@@ -1,4 +1,4 @@
-# Copyright (c) Zbigniew Siciarz 2010-2015.
+# Copyright (c) Zbigniew Siciarz 2010-2016.
 
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
