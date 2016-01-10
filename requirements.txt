@@ -7,7 +7,6 @@ django-extensions==1.6.1
 django-markitup==2.2.2
 django-model-utils==2.4
 django-rosetta==0.7.8
-djorm-pgarray==1.2
 docutils==0.12
 gunicorn==19.4.5
 ipython==4.0.1

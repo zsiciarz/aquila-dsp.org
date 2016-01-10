@@ -4,7 +4,6 @@ from django.contrib.postgres.fields import ArrayField
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
-from djorm_pgarray.fields import TextArrayField
 from markitup.fields import MarkupField
 from model_utils.models import TimeStampedModel
 
