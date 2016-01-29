@@ -4,7 +4,7 @@ PyGithub==1.26.0
 Pygments==2.0.2
 django-debug-toolbar==1.4
 django-extensions==1.6.1
-django-markitup==2.2.2
+django-markitup==2.3.0
 django-model-utils==2.4
 django-rosetta==0.7.8
 docutils==0.12
