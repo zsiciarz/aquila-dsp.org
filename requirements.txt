@@ -1,4 +1,4 @@
-Django==1.9.3
+Django==1.9.4
 Markdown==2.6.5
 PyGithub==1.26.0
 Pygments==2.1.3
