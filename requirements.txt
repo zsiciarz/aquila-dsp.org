@@ -10,7 +10,7 @@ django-rosetta==0.7.11
 docutils==0.12
 gunicorn==19.4.5
 ipython==4.2.0
-newrelic==2.62.0.47
+newrelic==2.64.0.48
 psycopg2==2.6.1
 raven==5.13.0
 requests==2.9.1
