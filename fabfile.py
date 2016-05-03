@@ -36,6 +36,13 @@ def git_pull():
 
 @task
 @roles("web")
+def upgrade_pip():
+    with prepare_project():
+        run("pip install pip setuptools wheel --upgrade")
+
+
+@task
+@roles("web")
 def update_requirements():
     with prepare_project():
         run("pip install -r requirements.txt")
