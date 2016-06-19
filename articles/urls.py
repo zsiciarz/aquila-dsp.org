@@ -1,6 +1,6 @@
 # Copyright (c) Zbigniew Siciarz 2010-2016.
 
-from django.conf.urls import patterns, url
+from django.conf.urls import url
 
 from .feeds import ArticleFeed
 from .views import ArticleListView, TaggedArticleListView, ExampleListView, \

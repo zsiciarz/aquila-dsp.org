@@ -1,6 +1,6 @@
 # Copyright (c) Zbigniew Siciarz 2010-2016.
 
-from django.conf.urls import patterns, include, url
+from django.conf.urls import include, url
 from django.contrib import admin
 from django.contrib.sitemaps.views import sitemap as django_sitemap
 from django.views.generic import TemplateView
