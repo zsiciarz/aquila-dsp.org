@@ -1,5 +1,4 @@
-#Django==1.10a1
-https://github.com/django/django/archive/08014fe75b4fc379523f340191a02147ec35f7a3.zip#egg=Django
+Django==1.10b1
 Markdown==2.6.6
 PyGithub==1.26.0
 Pygments==2.1.3
