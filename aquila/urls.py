@@ -1,5 +1,6 @@
 # Copyright (c) Zbigniew Siciarz 2010-2016.
 
+from django.conf import settings
 from django.conf.urls import include, url
 from django.contrib import admin
 from django.contrib.sitemaps.views import sitemap as django_sitemap
@@ -74,3 +75,9 @@ urlpatterns = [
     url(r'^rosetta/', include('rosetta.urls')),
     url(r'^markitup/', include('markitup.urls')),
 ]
+
+if settings.DEBUG:
+    import debug_toolbar
+    urlpatterns += [
+        url(r'^__debug__/', include(debug_toolbar.urls)),
+    ]
