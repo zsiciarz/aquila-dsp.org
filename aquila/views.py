@@ -1,6 +1,6 @@
 # Copyright (c) Zbigniew Siciarz 2010-2016.
 
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 from django.shortcuts import render
 from django.views.generic import RedirectView
 

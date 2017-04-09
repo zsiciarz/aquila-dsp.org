@@ -1,7 +1,7 @@
 # Copyright (c) Zbigniew Siciarz 2010-2016.
 
 from django.contrib import sitemaps
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 
 
 class StaticSitemap(sitemaps.Sitemap):
