@@ -11,7 +11,7 @@ docutils==0.13.1
 gunicorn==19.7.1
 ipython==5.1.0
 newrelic==2.78.0.57
-psycopg2==2.6.2
+psycopg2==2.7.1
 raven==6.0.0
 requests==2.12.4
 six==1.10.0
