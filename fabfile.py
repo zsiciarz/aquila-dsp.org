@@ -13,17 +13,16 @@ def prepare_project():
     """
     return nested(
         cd(PROJECT_PATH),
-        prefix("source ../../../.virtualenvs/aquila3/bin/activate"),
+        prefix("source $HOME/.virtualenvs/aquila-dsp.org/bin/activate"),
     )
 
 
-PROJECT_PATH = "$HOME/v/aquila-dsp.org/aquila-dsp.org"
+PROJECT_PATH = "$HOME/aquila-dsp.org"
 
 env.roledefs = {
-    'web': ["aquila@aquila-dsp.org"],
+    'web': ["django@aquila-dsp.org"],
 }
 env.color = True
-env.forward_agent = True
 env.use_ssh_config = True
 
 
@@ -65,7 +64,7 @@ def collect_static():
 @task
 @roles("web")
 def restart():
-    run("appctl restart aquila")
+    run("supervisorctl restart aquila")
 
 
 @task
