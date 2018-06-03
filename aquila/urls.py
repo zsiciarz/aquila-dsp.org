@@ -5,6 +5,7 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from django.contrib.sitemaps.views import sitemap as django_sitemap
 from django.views.generic import TemplateView
+from django.views.static import serve
 
 from . import views
 from .sitemaps import StaticSitemap
@@ -79,4 +80,12 @@ if settings.DEBUG:
     import debug_toolbar
     urlpatterns += [
         url(r'^__debug__/', include(debug_toolbar.urls)),
+    ]
+    # static files (images, css, javascript, etc.)
+    urlpatterns += [
+        url(
+            r'^site_media/(?P<path>.*)$',
+            serve,
+            {'document_root': settings.MEDIA_ROOT}
+        )
     ]
