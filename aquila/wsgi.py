@@ -13,12 +13,12 @@ middleware here, or combine a Django application with an application of another
 framework.
 
 """
-
 import os
 import newrelic.agent
 
-newrelic.agent.initialize(os.path.join(os.path.dirname(__file__), '../newrelic.ini'))
-
+newrelic_config = os.path.join(os.path.dirname(__file__), '../newrelic.ini')
+if os.path.isfile(newrelic_config):
+    newrelic.agent.initialize(newrelic_config)
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "aquila.settings")
 
